@@ -20,15 +20,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().requestMatchers(PathRequest.toStaticResources().atCommonLocations());
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // 사용자 계정 생성 및 권한 부여
-        String password = passwordEncoder().encode("1111");
-        auth.inMemoryAuthentication().withUser("user").password(password).roles("USER");
-        auth.inMemoryAuthentication().withUser("manager").password(password).roles("MANAGER", "USER");
-        auth.inMemoryAuthentication().withUser("admin").password(password).roles("ADMIN", "USER", "MANAGE");
-    }
-
     // 패스워드 암호화하는 작업(비밀번호를 안전하게 암호화 하도록 제공)
     @Bean
     public PasswordEncoder passwordEncoder() {
