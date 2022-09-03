@@ -1,4 +1,4 @@
-package inflearn.spring.security;
+package inflearn.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

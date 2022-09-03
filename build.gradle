@@ -20,9 +20,13 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// Thymeleaf 관련 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	// ModelMapper 관련 의존성 추가
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.1.1'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.projectlombok:lombok'

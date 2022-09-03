@@ -20,8 +20,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@Configuration
-@EnableWebSecurity
+//@Configuration
+//@EnableWebSecurity
 @Order(0)
 public class FilterChainProxySecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
