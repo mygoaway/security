@@ -7,8 +7,6 @@ spring:
     password: akrhkd88@@
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    hibernate:
-      ddl-auto: create
     properties:
       hibernate:
         format_sql: true
